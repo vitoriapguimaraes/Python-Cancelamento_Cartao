@@ -8,7 +8,7 @@ O diferencial está na automação: o script gera histogramas segmentados por st
 
 Os resultados incluem histogramas em PDF, mostrando a relação entre variáveis como renda, limite de crédito e status do cliente (ativo ou cancelado). Um PDF consolidado reúne todos os gráficos para facilitar a análise.
 
-![Tela do sistema](https://github.com/vitoriapguimaraes/portifolio-python-dataScience/blob/main/1.%20Cancelamento%20de%20Cart%C3%A3o/AnaliseCancelamentoCartao-Demonstracao.png)
+![Resultado do sistema](https://github.com/vitoriapguimaraes/Python-Cancelamento_Cartao/blob/main/results/AnaliseCancelamentoCartao-Demonstracao.png)
 
 ## Funcionalidades Principais
 
@@ -68,14 +68,14 @@ Os resultados incluem histogramas em PDF, mostrando a relação entre variáveis
 - Clientes com menor limite de crédito e alta taxa de utilização tendem a cancelar mais.
 - Visualizações revelam padrões úteis para tomada de decisão e retenção de clientes.
 
-## Próximos Passos/Melhorias
+## Status
 
-- Adicionar análise preditiva com machine learning para prever cancelamentos
-- Incorporar gráficos interativos no notebook ou web
-- Permitir seleção dinâmica do diretório de entrada
+✅ Concluído
 
----
+> Melhorias a serem incluídas:
+> - Adicionar análise preditiva com machine learning para prever cancelamentos
+> - - Incorporar gráficos interativos no notebook ou we
+>   - - Permitir seleção dinâmica do diretório de entrada
 
-### Currículos e Documentos
-
-Acesse os arquivos disponíveis na pasta [![Documentos](https://img.shields.io/badge/DOCUMENTOS-%F0%9F%93%83-blue?style=flat-square)](https://github.com/vitoriapguimaraes/vitoriapguimaraes/tree/main/DOCUMENTOS) para mais informações sobre minhas qualificações e certificações.
+## Mais sobre mim
+Acesse os arquivos disponíveis na [Pasta Documentos](https://github.com/vitoriapguimaraes/vitoriapguimaraes/tree/main/DOCUMENTOS) para mais informações sobre minhas qualificações e certificações.
