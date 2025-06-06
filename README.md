@@ -1,65 +1,81 @@
 # Análise dos Motivos de Cancelamento de Cartão de Crédito
 
-🛠️ Em manutenção
+> Projeto de análise de dados para identificar fatores associados ao cancelamento de cartões de crédito, com geração automática de relatórios visuais e insights para retenção de clientes.
 
-Este projeto analisa uma base de dados de clientes para identificar os principais fatores associados ao cancelamento de cartões de crédito. Ele combina limpeza de dados, análises exploratórias e visualizações para extrair insights que ajudam a compreender padrões e propor estratégias de retenção.
+Este projeto utiliza uma base de dados real de clientes para investigar os principais motivos que levam ao cancelamento de cartões de crédito. A análise envolve limpeza de dados, exploração estatística e visualização, permitindo identificar padrões e propor estratégias para reduzir a evasão de clientes.
 
-## Demonstração/Visualização
-Os resultados incluem histogramas salvos em PDF, mostrando a relação entre variáveis como renda, limite de crédito e a categoria do cliente (ativo ou cancelado). Um PDF consolidado reúne todos os gráficos para facilitar a análise. Aqui estão alguns deles.
+O diferencial está na automação: o script gera histogramas segmentados por status de cancelamento para todas as variáveis relevantes, salvando-os em PDF e consolidando tudo em um relatório único, pronto para análise e compartilhamento.
+
+Os resultados incluem histogramas em PDF, mostrando a relação entre variáveis como renda, limite de crédito e status do cliente (ativo ou cancelado). Um PDF consolidado reúne todos os gráficos para facilitar a análise.
 
 ![Tela do sistema](https://github.com/vitoriapguimaraes/portifolio-python-dataScience/blob/main/1.%20Cancelamento%20de%20Cart%C3%A3o/AnaliseCancelamentoCartao-Demonstracao.png)
 
-## Principais Tecnologias Utilizadas
-- Python: Linguagem de programação principal utilizada no projeto.
-- Pandas: Manipulação e análise eficiente de dados tabulares.
-- Plotly: Criação de gráficos e visualizações interativas.
-- PyPDF2: Manipulação de arquivos PDF para combinar gráficos em um único documento.
+## Funcionalidades Principais
+
+- Limpeza e tratamento automático dos dados (remoção de colunas irrelevantes e valores ausentes)
+- Análise exploratória: estatísticas descritivas e distribuição de cancelamentos
+- Geração automática de histogramas para todas as variáveis, segmentados por status
+- Consolidação dos gráficos em um único PDF para facilitar a análise
+- Relatórios prontos para uso por equipes de negócio
+
+## Tecnologias Utilizadas
+
+- **Python**: linguagem principal
+- **Pandas**: manipulação e análise de dados
+- **Plotly**: visualização gráfica interativa e exportação de gráficos
+- **PyPDF2**: manipulação e consolidação de arquivos PDF
 
 ## Estrutura do Projeto
+
 ```
-├── app.py            # Script principal contendo a lógica para importar, tratar, e analisar os dados, além de gerar
-|                       os gráficos e o PDF consolidado.
-├── data-bank.csv     # Base de dados dos clientes utilizada na análise.
-└── HISTOGRAM/        # Pasta gerada automaticamente para armazenar os histogramas individuais e o PDF final consolidado.
+├── scripts/
+│   ├── app.py         # Script principal: importa, trata, analisa dados e gera relatórios
+│   └── app.ipynb      # Versão notebook para exploração interativa
+├── dataset/
+│   └── data-bank.csv  # Base de dados dos clientes
+├── results/
+│   └── HISTOGRAM/     # Histogramas individuais e PDFs consolidados
+└── README.md          # Documentação do projeto
 ```
 
 ## Como Executar
 
-### Pré-requisitos:
-- Certifique-se de ter Python instalado (>= 3.7).
-- Instale as dependências necessárias executando:
-      ```
-      pip install pandas plotly PyPDF2
-      ```
+### Pré-requisitos
 
-### Etapas:
-1. Execute o script com:
-      ```
-      python app.py
-      ```
+- Python >= 3.7
+- Instale as dependências:
+  ```
+  pip install pandas plotly PyPDF2
+  ```
 
-2. Resultados: Os histogramas serão salvos na pasta <code>HISTOGRAM/</code>.
+### Passos
 
-O PDF consolidado será nomeado com a data e hora da execução, como YYYY-MM-DD_HHMMSS-Histogram.pdf.
+1. Execute o script principal:
+   ```
+   python scripts/app.py
+   ```
+2. Os histogramas e o PDF consolidado serão salvos em `results/HISTOGRAM/`.
+   - O PDF final será nomeado com a data e hora da execução, por exemplo: `2025-06-06_151425-Histograms.pdf`.
 
-## Funcionalidades
-- Limpeza e Tratamento de Dados: Remoção de colunas irrelevantes e valores ausentes para análises precisas.
-- Análises Exploratórias: Estatísticas descritivas e visualizações para identificar padrões nos dados.
-- Visualização em Histogramas: Geração de gráficos que mostram a relação entre as variáveis e o status de cancelamento dos clientes.
-- Consolidação de Relatórios: Criação de um PDF único com todos os histogramas gerados, facilitando o compartilhamento e a análise.
+## Como Usar e Interpretar
+
+- Analise os histogramas para identificar padrões de cancelamento relacionados a variáveis como limite de crédito, faixa salarial, tempo de cliente, etc.
+- O relatório consolidado facilita o compartilhamento dos resultados com equipes de negócio.
+- Insights extraídos podem embasar estratégias de retenção e ações preventivas.
 
 ## Resultados e Conclusões
-- Clientes com menor limite de crédito e alta taxa de utilização apresentam maior propensão ao cancelamento.
-- Gráficos revelam padrões significativos que podem ajudar a equipe de negócios a identificar pontos críticos e atuar na retenção de clientes.
+
+- Clientes com menor limite de crédito e alta taxa de utilização tendem a cancelar mais.
+- Visualizações revelam padrões úteis para tomada de decisão e retenção de clientes.
 
 ## Próximos Passos/Melhorias
-- Adicionar uma análise preditiva usando modelos de machine learning para prever a probabilidade de cancelamento com base nas características dos clientes.
-- Incorporar gráficos interativos diretamente no ambiente web ou Jupyter Notebook para maior acessibilidade.
-- Melhorar a interface de execução, permitindo que o script solicite ao usuário o diretório de entrada para maior flexibilidade.
 
-<br>
-<hr> 
+- Adicionar análise preditiva com machine learning para prever cancelamentos
+- Incorporar gráficos interativos no notebook ou web
+- Permitir seleção dinâmica do diretório de entrada
+
+---
 
 ### Currículos e Documentos
-Acesse os arquivos disponíveis na pasta 
-[![Documentos](https://img.shields.io/badge/DOCUMENTOS-%F0%9F%93%83-blue?style=flat-square)](https://github.com/vitoriapguimaraes/vitoriapguimaraes/tree/main/DOCUMENTOS) para mais informações sobre minhas qualificações e certificações.
+
+Acesse os arquivos disponíveis na pasta [![Documentos](https://img.shields.io/badge/DOCUMENTOS-%F0%9F%93%83-blue?style=flat-square)](https://github.com/vitoriapguimaraes/vitoriapguimaraes/tree/main/DOCUMENTOS) para mais informações sobre minhas qualificações e certificações.
